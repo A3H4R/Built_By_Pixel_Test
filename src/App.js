@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import "antd/dist/antd.css";
+import UserList from "./components/UserList";
+import {PageDiv,Header,Footer,PageContent } from "./styling/styling"
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <PageDiv>
+        <Header>
+      <h1 style ={{color:"white", padding:"0.2em"}}>Built by Pixel Tech Test</h1>
+        </Header>
+        <PageContent>
+      <UserList></UserList>
+        </PageContent>
+        <Footer></Footer>
+      </PageDiv>
     </div>
   );
-}
+};
 
 export default App;
